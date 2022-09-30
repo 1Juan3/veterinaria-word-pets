@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario v2</title>
+
+</head>
+<body >
+    <section >
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="box">
+            <div class="fondo" style="--i:0;"></div>
+            <div class="fondo" style="--i:1;"></div>
+            <div class="fondo" style="--i:2;"></div>
+            <div class="fondo" style="--i:3;"></div>
+            <div class="fondo" style="--i:4;"></div>
+            <div class="fondo" style="--i:5;"></div>
+            <div class="contenedor">
+                <div class="formulario">
+                    <h2>Registro de usuarios</h2>
+                    <form  (ngSubmit)="registrar()" [formGroup]="registrarUsuario" >
+                        <div class="input">
+                            <input type="email" placeholder="Email" formControlName="email">
+                            <span *ngIf="registrarUsuario.get('email')?.hasError('required') && registrarUsuario.get('email')?.touched" class="text-danger" >
+                                El <strong>Correo</strong> es requerido
+                            </span>
+                        </div>
+                        <div class="input">
+                            <input type="password" placeholder="Contraseña" formControlName="password">
+                        </div>
+                        <div class="input">
+                            <input type="password" placeholder="Confirmar Contraseña" formControlName="repetirPassword">
+                        </div>
+                        <div class="input">
+                            <input type="submit" value="Registrar" [disabled]="registrarUsuario.invalid">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    
+    
+</body>
+</html>

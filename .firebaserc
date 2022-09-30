@@ -1,0 +1,21 @@
+{
+  "targets": {
+    "empleados-bccc9": {
+      "hosting": {
+        "empleados": [
+          "empleados-bccc9"
+        ],
+        "productos": [
+          "empleados-bccc9"
+        ]
+      }
+    },
+    "veterinaria-e739d": {
+      "hosting": {
+        "empleados": [
+          "veterinaria-e739d"
+        ]
+      }
+    }
+  }
+}

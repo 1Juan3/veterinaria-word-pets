@@ -1,0 +1,7 @@
+{
+    "liveshare.allowGuestDebugControl": true,
+    "liveshare.allowGuestTaskControl": true,
+    "liveshare.alwaysFollowHost": false,
+    "liveshare.launcherClient": "visualStudioCode",
+    "liveshare.showReadOnlyUsersInEditor": "always"
+}
